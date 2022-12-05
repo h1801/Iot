@@ -1,0 +1,39 @@
+<!DOCTYPE html >
+<html>
+
+<head>
+<title>Servo Motor Angle Control Using Wi-Fi</title>
+<script src="jquery.js"></script>
+</head>
+
+<body>
+	<center>
+<h1>
+	<marquee loop="infinite" direction="left">
+	<b> Servo Motor Angle Control Using Wi-Fi </b> 
+	</marquee>
+</h1>
+<h4> <b> Enter the IP address of Wi-Fi module from serial monitor</b> </h4>
+<div style="margin: 0; width:600px; height:40px;">
+	<FORM NAME="form" ACTION="" METHOD="GET">
+		IP Address of Wi-Fi module:
+		<INPUT TYPE="text" NAME="inputbox" VALUE="192.168.86.22">
+	</FORM>
+</div>
+<h3> Change angle of servo motor from here</h3>
+<center><input type="range" min="0" max="90" onmouseup="servo(this.value)" /></center>
+	</center>
+</body>
+
+<script>
+$.ajaxSetup({timeout:1000});
+function servo(angle)
+{
+	TextVar = form.inputbox.value;
+	ArduinoVar = "http://" + TextVar + ":80";
+	$.get( ArduinoVar, { "ang": angle })	;
+	{Connection: close};
+}
+</script>
+
+</html>
