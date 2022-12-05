@@ -1,8 +1,4 @@
 # IoT based Smart Parking System
-
-https://user-images.githubusercontent.com/108614459/205726954-f139787e-ab5c-44ea-a91f-4b0f664a0f68.mp4
-
-
 ## Implemented Attributes
 • Arduino Uno <br />
 • Esp8266 Wifi Module <br />
